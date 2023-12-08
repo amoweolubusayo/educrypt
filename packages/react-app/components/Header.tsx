@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import Logo from "./Logo";
+import Link from "next/link";
 
 export default function Header() {
   const [hideConnectBtn, setHideConnectBtn] = useState(false);
@@ -45,16 +46,18 @@ export default function Header() {
                     height="24"
                     alt="Hyperfi shield Logo"
                   /> */}
-                  <Logo />
+                  <Link href="/">
+                    <Logo />
+                  </Link>
                 </div>
                 <div></div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  <a
+                  {/* <a
                     href="/"
                     className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"
                   >
                     Home
-                  </a>
+                  </a> */}
                   <a
                     href="/learn"
                     className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"

@@ -353,7 +353,7 @@ import {
 } from "@chakra-ui/react";
 
 import simulateInvesment from "./api/simulateInvestment";
-import SimulationChart from "./simulatechart";
+import SimulationChart from "../components/SimulateChart";
 
 import { useTranslation } from "react-i18next";
 import "./i18n";

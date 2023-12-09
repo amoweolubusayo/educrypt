@@ -28,10 +28,10 @@ import {
 
 import { Line } from "react-chartjs-2";
 
-import simulateInvesment from "./api/simulateInvestment";
+import simulateInvesment from "../pages/api/simulateInvestment";
 
 import { useTranslation } from "react-i18next";
-import "./i18n";
+import "../pages/i18n";
 
 Chart.register(
   CategoryScale,

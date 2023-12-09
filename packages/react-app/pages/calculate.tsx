@@ -366,9 +366,7 @@ type Props = {
   setSimulateState: any;
 };
 
-function Simulate({
-  setSimulateState,
-}: Props) {
+function Simulate({ setSimulateState }: Props) {
   const { t } = useTranslation("Simulation");
   const initialSimulation = {
     labels: ["Today", "1 year"],
@@ -392,7 +390,7 @@ function Simulate({
     setSimulationData(
       simulateInvesment(time, Number(value), Number(monthlyAmount), 0.1)
     );
-    setSimulateState("simulate");
+    // setSimulateState("simulate");
   };
 
   const [showTooltip, setShowTooltip] = React.useState(false);
@@ -516,11 +514,11 @@ function Simulate({
           <Box width={"100%"} padding={8}>
             <HStack justifyContent={"space-between"}>
               <Text fontWeight={"light"} fontSize={"15px"}>
-                {t("during")}
+                {/* {t("during")} */}
               </Text>
 
               <Text fontWeight={"light"} fontSize={"15px"}>
-                {time} {t("years")}
+                {/* {time} {t("years")} */}
               </Text>
             </HStack>
             <Slider
@@ -541,28 +539,27 @@ function Simulate({
               </SliderTrack>
               <Tooltip
                 hasArrow
-                bg="primary"
+                bg="pink"
                 color="white"
                 placement="top"
                 isOpen={showTooltip}
                 label={`${time}`}
               >
-                <SliderThumb bg="primary"></SliderThumb>
+                <SliderThumb bg="pink"></SliderThumb>
               </Tooltip>
             </Slider>
           </Box>
 
-          {/* <Center marginTop={"50px"}>
-            <Button
-              onClick={simulate}
-              isDisabled={value === "" || monthlyAmount === ""}
-              bg="primary"
-              boxShadow="0px 2px 3px rgba(0, 0, 0, 0.15)"
-              borderRadius={"15px"}
-            >
-              <Text color={"white"}>{t("continue")}</Text>
-            </Button>
-          </Center> */}
+          <Button
+            onClick={simulate}
+            isDisabled={value === "" || monthlyAmount === ""}
+            bg="chocolate"
+            borderRadius={"10px"}
+          >
+            <Text color={"white"} fontSize={"35px"}>
+              {t("simulate")}
+            </Text>
+          </Button>
         </Box>
 
         <Box width={["50%", "25%", "25%"]}>

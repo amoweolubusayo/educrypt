@@ -26,8 +26,8 @@
     },
     "Simulation": {
         "title": "How much do you want to invest?",
-        "amountMessage": "If started today with",
-        "recurringMessage": "If every year you will invest",
+        "amountMessage": "If you start investing this today",
+        "recurringMessage": "and every year you invest this",
         "during": "During",
         "years": "years",
         "continue": "Continue",

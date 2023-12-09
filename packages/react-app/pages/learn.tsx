@@ -77,7 +77,7 @@ function learn() {
         <div>1. Fast and Low-Cost Transactions</div>
         <div>
           {" "}
-          Polygon's Proof-of-Stake consensus mechanism significantly reduces
+          Polygon&apos;s Proof-of-Stake consensus mechanism significantly reduces
           transaction costs and confirmation times compared to Ethereum, making
           it an attractive platform for DeFi users.{" "}
         </div>
@@ -90,7 +90,7 @@ function learn() {
           Polygon is designed to be compatible with Ethereum, allowing for
           seamless integration with existing Ethereum-based projects. This
           interoperability enhances the overall DeFi ecosystem. 3. Polygon PoS
-          Chains: Projects like QuickSwap and Aavegotchi leverage Polygon's PoS
+          Chains: Projects like QuickSwap and Aavegotchi leverage Polygon&apos;s PoS
           chains to create efficient decentralized exchanges and gaming
           platforms, respectively.
         </div>
@@ -113,7 +113,7 @@ function learn() {
         <div>3. Connecting to DeFi Platforms</div>
         <div>
           Connect your wallet to DeFi platforms using the provided wallet
-          integration. Ensure you're using secure connections and verified
+          integration. Ensure you&apos;re using secure connections and verified
           platforms.
         </div>
         <div>4. Exploring DeFi Services</div>

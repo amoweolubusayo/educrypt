@@ -58,24 +58,24 @@ export default function Header() {
                   >
                     Home
                   </a> */}
-                  <a
+                  <Link
                     href="/learn"
                     className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"
                   >
                     Learn
-                  </a>
-                  <a
-                    href=""
+                  </Link>
+                  <Link
+                    href="/calculate"
                     className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"
                   >
                     Calculate
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"
                   >
                     Invest
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="connect-btn">

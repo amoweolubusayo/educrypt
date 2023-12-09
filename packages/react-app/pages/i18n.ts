@@ -15,3 +15,8 @@ i18n.use(initReactI18next).use(LanguageDetector).init({
 });
 
 export const availableLanguages = Object.keys(resources);
+const I18nProvider = () => {
+  return;
+};
+
+export default I18nProvider;

@@ -1,13 +1,30 @@
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 import { FaTimesCircle, FaBars, FaBook } from "react-icons/fa";
+import Link from "next/link";
 
 const posts = [
   {
     id: 1,
     title: "What is Defi",
-    href: "#",
+    href: "https://www.youtube.com/embed/SZXwDhcx9uY",
     description: "Decentralized finance for beginners",
+    videoEmbedCode: "https://www.youtube.com/embed/SZXwDhcx9uY",
+    imageUrl: "https://www.youtube.com/watch?v=SZXwDhcx9uY",
+    date: "Mar 16, 2020",
+    datetime: "2020-03-16",
+    author: {
+      name: "Michael Foster",
+      imageUrl:
+        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+  },
+  {
+    id: 1,
+    title: "Defi Animated",
+    href: "https://www.youtube.com/embed/SZXwDhcx9uY",
+    description: "Decentralized finance for beginners",
+    videoEmbedCode: "https://www.youtube.com/embed/SZXwDhcx9uY",
     imageUrl:
       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
     date: "Mar 16, 2020",
@@ -20,24 +37,10 @@ const posts = [
   },
   {
     id: 1,
-    title: "What is Defi",
-    href: "#",
+    title: "How to make money with crypto",
+    href: "https://www.youtube.com/embed/SZXwDhcx9uY",
     description: "Decentralized finance for beginners",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    author: {
-      name: "Michael Foster",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  },
-  {
-    id: 1,
-    title: "What is Defi",
-    href: "#",
-    description: "Decentralized finance for beginners",
+    videoEmbedCode: "https://www.youtube.com/embed/SZXwDhcx9uY",
     imageUrl:
       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
     date: "Mar 16, 2020",
@@ -170,11 +173,11 @@ export default function Home() {
                 key={post.id}
                 className="relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
               >
-                <img
-                  src={post.imageUrl}
-                  alt=""
+                <iframe
+                  src={post.videoEmbedCode}
+                  allow="autoplay; encrypted-media"
                   className="absolute inset-0 -z-10 h-full w-full object-cover"
-                />
+                ></iframe>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
                 <div className="absolute inset-0 -z-10 ring-1 ring-inset ring-gray-900/10" />
 
@@ -224,12 +227,14 @@ export default function Home() {
 
           <div className="flex flex-col justify-center items-center mt-10">
             <div className="font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-20 mb-4">
-              <button
-                type="button"
-                className="rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-              >
-                Calculator
-              </button>
+              <Link href="/calculate">
+                <button
+                  type="button"
+                  className="rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                >
+                  Calculator
+                </button>
+              </Link>
             </div>
 
             <div className="font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-20">

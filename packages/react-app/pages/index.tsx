@@ -81,12 +81,14 @@ export default function Home() {
 
               <div className="mt-10 flex flex-col gap-y-4">
                 <div className="font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-20">
-                  <button
-                    type="button"
-                    className="rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                  >
-                    Calculate
-                  </button>
+                  <Link href="/calculate">
+                    <button
+                      type="button"
+                      className="rounded-md bg-white px-3 py-2 text-md font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Calculate
+                    </button>
+                  </Link>
                 </div>
                 <div className="font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-20">
                   <button

@@ -7,11 +7,11 @@ module.exports = {
   networks: {
     alfajores: {
       url: "https://alfajores-forno.celo-testnet.org",
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: process.env.PRIVATE_KEY,
     },
     celo: {
       url: "https://forno.celo.org",
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: process.env.PRIVATE_KEY,
     },
     scrollSepolia: {
       url: "https://sepolia-rpc.scroll.io/" || "",
